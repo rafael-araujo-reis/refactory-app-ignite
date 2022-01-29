@@ -24,13 +24,13 @@ class Food extends Component {
     });
 
     this.setState({ isAvailable: !isAvailable });
-  }
+  };
 
   setEditingFood = () => {
     const { food, handleEditFood } = this.props;
 
     handleEditFood(food);
-  }
+  };
 
   render() {
     const { isAvailable } = this.state;

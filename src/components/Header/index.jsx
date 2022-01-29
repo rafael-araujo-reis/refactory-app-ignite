@@ -27,7 +27,7 @@ class Header extends Component {
           </nav>
         </header>
       </Container>
-    )
+    );
   }
 };
 

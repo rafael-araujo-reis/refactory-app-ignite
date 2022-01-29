@@ -15,7 +15,7 @@ class Dashboard extends Component {
       editingFood: {},
       modalOpen: false,
       editModalOpen: false,
-    }
+    };
   }
 
   async componentDidMount() {
@@ -37,7 +37,7 @@ class Dashboard extends Component {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   handleUpdateFood = async food => {
     const { foods, editingFood } = this.state;
@@ -56,7 +56,7 @@ class Dashboard extends Component {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   handleDeleteFood = async id => {
     const { foods } = this.state;
@@ -66,23 +66,23 @@ class Dashboard extends Component {
     const foodsFiltered = foods.filter(food => food.id !== id);
 
     this.setState({ foods: foodsFiltered });
-  }
+  };
 
   toggleModal = () => {
     const { modalOpen } = this.state;
 
     this.setState({ modalOpen: !modalOpen });
-  }
+  };
 
   toggleEditModal = () => {
     const { editModalOpen } = this.state;
 
     this.setState({ editModalOpen: !editModalOpen });
-  }
+  };
 
   handleEditFood = food => {
     this.setState({ editingFood: food, editModalOpen: true });
-  }
+  };
 
   render() {
     const { modalOpen, editModalOpen, editingFood, foods } = this.state;

@@ -9,7 +9,7 @@ class ModalEditFood extends Component {
   constructor(props) {
     super(props);
 
-    this.formRef = createRef()
+    this.formRef = createRef();
   }
 
   handleSubmit = async (data) => {
