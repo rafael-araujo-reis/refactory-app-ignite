@@ -9,6 +9,11 @@ import { useField } from '@unform/core';
 
 import { Container } from './styles';
 
+// interface Container {
+//   isFocused: boolean;
+//   isFilled: boolean;
+// }
+
 const Input = ({ name, icon: Icon, ...rest }) => {
   const inputRef = useRef(null);
 
@@ -36,7 +41,7 @@ const Input = ({ name, icon: Icon, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <Container isFilled={isFilled} isFocused={isFocused} key={1}>
       {Icon && <Icon size={20} />}
 
       <input
